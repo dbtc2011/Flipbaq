@@ -8,15 +8,26 @@
 
 import UIKit
 import CoreData
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var strStoryboardId = "registrationNavVC"
+        if FBSDKAccessToken.current() != nil {
+            strStoryboardId = "menuNavVC"
+        }
+        
+        let initialVC = mainStoryboard.instantiateViewController(withIdentifier: strStoryboardId)
+        self.window!.rootViewController = initialVC
+        self.window!.makeKeyAndVisible()
+        
         return true
     }
 
@@ -43,7 +54,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {

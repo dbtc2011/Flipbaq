@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C51E1D41F63956B00BB0929 /* ConnectToFacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C51E1D31F63956B00BB0929 /* ConnectToFacebookViewController.swift */; };
+		8C51E34D1F639E6900BB0929 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C51E34B1F639E6900BB0929 /* FBSDKCoreKit.framework */; };
+		8C51E34E1F639E6900BB0929 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C51E34C1F639E6900BB0929 /* FBSDKLoginKit.framework */; };
+		8C51E3501F63A30200BB0929 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C51E34F1F63A30200BB0929 /* Bolts.framework */; };
 		8CB06E1B1F39EC7E00B8F43F /* AlbumsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB06E1A1F39EC7E00B8F43F /* AlbumsStoryboard.storyboard */; };
 		8CB06E1D1F39EC9B00B8F43F /* PhotoCaptureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB06E1C1F39EC9B00B8F43F /* PhotoCaptureStoryboard.storyboard */; };
 		8CC0DDD41F19E7AF001DC656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC0DDD31F19E7AF001DC656 /* AppDelegate.swift */; };
@@ -29,6 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C51E1D31F63956B00BB0929 /* ConnectToFacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectToFacebookViewController.swift; path = Controllers/ConnectToFacebookViewController.swift; sourceTree = "<group>"; };
+		8C51E34B1F639E6900BB0929 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		8C51E34C1F639E6900BB0929 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		8C51E34F1F63A30200BB0929 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		8C51E3511F63B42600BB0929 /* Flipbaq.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Flipbaq.entitlements; sourceTree = "<group>"; };
 		8CB06E1A1F39EC7E00B8F43F /* AlbumsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlbumsStoryboard.storyboard; sourceTree = "<group>"; };
 		8CB06E1C1F39EC9B00B8F43F /* PhotoCaptureStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoCaptureStoryboard.storyboard; sourceTree = "<group>"; };
 		8CC0DDD01F19E7AF001DC656 /* Flipbaq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flipbaq.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C51E3501F63A30200BB0929 /* Bolts.framework in Frameworks */,
+				8C51E34E1F639E6900BB0929 /* FBSDKLoginKit.framework in Frameworks */,
+				8C51E34D1F639E6900BB0929 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +74,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C51E1D51F639C3A00BB0929 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C51E34B1F639E6900BB0929 /* FBSDKCoreKit.framework */,
+				8C51E34C1F639E6900BB0929 /* FBSDKLoginKit.framework */,
+				8C51E34F1F63A30200BB0929 /* Bolts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8CB06E1E1F39ECA400B8F43F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +106,7 @@
 		8CB06E201F39ECBC00B8F43F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8C51E1D31F63956B00BB0929 /* ConnectToFacebookViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -109,9 +132,11 @@
 		8CC0DDD21F19E7AF001DC656 /* Flipbaq */ = {
 			isa = PBXGroup;
 			children = (
+				8C51E3511F63B42600BB0929 /* Flipbaq.entitlements */,
 				8CC0DDD31F19E7AF001DC656 /* AppDelegate.swift */,
 				8CB06E201F39ECBC00B8F43F /* Controllers */,
 				8CB06E1E1F39ECA400B8F43F /* Views */,
+				8C51E1D51F639C3A00BB0929 /* Frameworks */,
 				8CC0DDDD1F19E7AF001DC656 /* Assets.xcassets */,
 				8CC0DDDF1F19E7AF001DC656 /* LaunchScreen.storyboard */,
 				8CC0DDE21F19E7AF001DC656 /* Info.plist */,
@@ -181,6 +206,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Q2BQM7QJBH;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					8CC0DDE61F19E7AF001DC656 = {
 						CreatedOnToolsVersion = 8.0;
@@ -238,6 +268,7 @@
 			files = (
 				8CC0DDDC1F19E7AF001DC656 /* Flipbaq.xcdatamodeld in Sources */,
 				8CC0DDD41F19E7AF001DC656 /* AppDelegate.swift in Sources */,
+				8C51E1D41F63956B00BB0929 /* ConnectToFacebookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +405,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Flipbaq/Flipbaq.entitlements;
 				DEVELOPMENT_TEAM = Q2BQM7QJBH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flipbaq/FacebookSDKs-iOS-4",
+					"$(PROJECT_DIR)/Flipbaq",
+				);
 				INFOPLIST_FILE = Flipbaq/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zed.Flipbaq;
@@ -387,7 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Flipbaq/Flipbaq.entitlements;
 				DEVELOPMENT_TEAM = Q2BQM7QJBH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flipbaq/FacebookSDKs-iOS-4",
+					"$(PROJECT_DIR)/Flipbaq",
+				);
 				INFOPLIST_FILE = Flipbaq/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zed.Flipbaq;

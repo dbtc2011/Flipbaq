@@ -46,7 +46,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dL3-uc-yVC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CreateAlbum_White" translatesAutoresizingMaskIntoConstraints="NO" id="dL3-uc-yVC">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="Iug-Rc-b8p"/>
                                     <constraint firstAttribute="height" constant="110" id="k47-3h-0DC"/>
@@ -140,7 +140,7 @@
                             <constraint firstItem="FGR-PR-zs1" firstAttribute="top" secondItem="sTY-Gb-aj2" secondAttribute="bottom" constant="20" id="jK8-Xm-ryj"/>
                             <constraint firstAttribute="trailing" secondItem="QJe-Tp-KKl" secondAttribute="trailing" id="k1r-6i-nGZ"/>
                             <constraint firstItem="QJe-Tp-KKl" firstAttribute="leading" secondItem="b2s-20-Uz6" secondAttribute="leading" id="mG1-wL-X9v"/>
-                            <constraint firstItem="qT4-g7-Mg5" firstAttribute="top" secondItem="dL3-uc-yVC" secondAttribute="bottom" constant="8" id="nER-cH-0mw"/>
+                            <constraint firstItem="qT4-g7-Mg5" firstAttribute="top" secondItem="dL3-uc-yVC" secondAttribute="bottom" id="nER-cH-0mw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="are-6B-j9l" secondAttribute="trailing" constant="14" id="q3f-Xr-4BH"/>
                         </constraints>
                     </view>
@@ -215,7 +215,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KKa-P1-p7g">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CreateAlbum_White" translatesAutoresizingMaskIntoConstraints="NO" id="KKa-P1-p7g">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="jJo-R5-nV4"/>
                                     <constraint firstAttribute="width" constant="100" id="z3k-oU-dlu"/>
@@ -384,7 +384,7 @@
                             <constraint firstAttribute="trailing" secondItem="ETz-k2-20P" secondAttribute="trailing" id="gJL-4L-QhA"/>
                             <constraint firstItem="Wts-Of-9sE" firstAttribute="top" secondItem="ETz-k2-20P" secondAttribute="bottom" id="gUR-mc-PuF"/>
                             <constraint firstItem="Wts-Of-9sE" firstAttribute="top" secondItem="1Fo-9p-xhD" secondAttribute="bottom" constant="20" id="glB-6f-2Em"/>
-                            <constraint firstItem="uAF-TB-lTA" firstAttribute="top" secondItem="KKa-P1-p7g" secondAttribute="bottom" constant="8" id="ifR-YH-gTN"/>
+                            <constraint firstItem="uAF-TB-lTA" firstAttribute="top" secondItem="KKa-P1-p7g" secondAttribute="bottom" id="ifR-YH-gTN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5ur-4l-Dbe" secondAttribute="trailing" constant="14" id="l7S-oa-Qi3"/>
                             <constraint firstItem="KKa-P1-p7g" firstAttribute="top" secondItem="Mlq-yD-dfu" secondAttribute="bottom" constant="25" id="rih-Ah-UAu"/>
                             <constraint firstItem="xH6-sR-0MC" firstAttribute="top" secondItem="BJN-Cb-MqM" secondAttribute="bottom" constant="8" id="tLv-yB-I8e"/>
@@ -511,4 +511,7 @@
             <point key="canvasLocation" x="856.79999999999995" y="772.26386806596713"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CreateAlbum_White" width="83" height="83"/>
+    </resources>
 </document>

@@ -1,23 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8z2-de-4XL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="lmo-NA-bCt">
             <objects>
-                <navigationController storyboardIdentifier="navStoryboard" id="8z2-de-4XL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navStoryboard" navigationBarHidden="YES" id="8z2-de-4XL" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Clk-De-Smd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="GO2-mo-kxT" kind="relationship" relationship="rootViewController" id="N45-MU-frr"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NaX-cQ-HAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-470" y="119"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Rnp-E5-nIA">
+            <objects>
+                <viewController id="GO2-mo-kxT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DuG-G3-6y8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sxf-pf-5c5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P55-pv-hHU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB6-zt-pag">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylc-ey-179">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="S0W-it-jqK"/>
+                                    <constraint firstAttribute="width" constant="25" id="gay-0Q-FBC"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDw-YS-HCk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="BK3-Vb-mDe"/>
+                                    <constraint firstAttribute="width" constant="55" id="Tcs-8P-QKg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gd1-hy-mcN">
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.1843137255" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="H9f-3K-n1A"/>
+                                    <constraint firstAttribute="height" constant="55" id="K5I-Da-KXU"/>
+                                </constraints>
+                                <state key="normal" image="TakePhoto_White"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sxf-pf-5c5" firstAttribute="top" secondItem="RDw-YS-HCk" secondAttribute="bottom" constant="20" id="2ez-yx-U8Z"/>
+                            <constraint firstItem="Sxf-pf-5c5" firstAttribute="top" secondItem="Gd1-hy-mcN" secondAttribute="bottom" constant="20" id="B6A-gz-4pb"/>
+                            <constraint firstAttribute="trailing" secondItem="IB6-zt-pag" secondAttribute="trailing" id="GOg-t1-Qv6"/>
+                            <constraint firstItem="Sxf-pf-5c5" firstAttribute="top" secondItem="IB6-zt-pag" secondAttribute="bottom" id="IOj-xT-hEH"/>
+                            <constraint firstItem="ylc-ey-179" firstAttribute="top" secondItem="DuG-G3-6y8" secondAttribute="bottom" constant="8" id="Jfy-TT-YVZ"/>
+                            <constraint firstItem="IB6-zt-pag" firstAttribute="leading" secondItem="P55-pv-hHU" secondAttribute="leading" id="K7J-6B-cze"/>
+                            <constraint firstItem="IB6-zt-pag" firstAttribute="top" secondItem="P55-pv-hHU" secondAttribute="top" id="VOk-DT-zad"/>
+                            <constraint firstItem="ylc-ey-179" firstAttribute="leading" secondItem="P55-pv-hHU" secondAttribute="leadingMargin" constant="4" id="Yc8-wW-Rpy"/>
+                            <constraint firstItem="RDw-YS-HCk" firstAttribute="trailing" secondItem="P55-pv-hHU" secondAttribute="trailingMargin" id="Z2s-pf-sob"/>
+                            <constraint firstItem="Gd1-hy-mcN" firstAttribute="centerX" secondItem="P55-pv-hHU" secondAttribute="centerX" id="u1Y-oe-i8F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="le6-rN-Vay"/>
+                    <connections>
+                        <segue destination="cp8-OQ-lLE" kind="presentation" id="iDs-et-rQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4DQ-jF-YkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.60000000000002" y="117.39130434782609"/>
+        </scene>
+        <!--detailedAlbumVC-->
+        <scene sceneID="rDl-35-9Eb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AlbumsStoryboard" referencedIdentifier="detailedAlbumVC" id="cp8-OQ-lLE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrv-Qb-tuF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="569"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="TakePhoto_White" width="83" height="83"/>
+    </resources>
 </document>
